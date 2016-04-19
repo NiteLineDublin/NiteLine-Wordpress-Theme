@@ -1,5 +1,5 @@
 <section class="container horizontal-padd-2">
-  <div class="col-md-7 col-sm-6 col-xs-12 vertical-padd-4">
+  <div class="col-md-7 col-sm-6 col-xs-12 top-padd-4 bottom-padd-2">
     <h2><?php the_field('posts_section_title'); ?></h2>
     <div class="yellow-divider-left"></div>
     <?php $my_query = new WP_Query('showposts=3'); ?>

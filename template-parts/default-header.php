@@ -1,4 +1,4 @@
-<header class="site-header">
+<header class="site-header top-padd-1">
   <div class="container">
     <nav class="navbar" role="navigation" aria-label="<?php esc_attr_e('Primary', 'niteline'); ?>">
       <div class="navbar-header">

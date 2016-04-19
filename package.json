@@ -1,0 +1,19 @@
+{
+  "name": "niteline",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "NiteLine",
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^13.0.0",
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.0.5",
+    "webpack-stream": "^3.1.0"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}

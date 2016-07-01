@@ -1,7 +1,16 @@
 const gulp = require('gulp')
 const less = require('gulp-less')
+const sourcemaps = require('gulp-sourcemaps')
 
-gulp.task('less', function () {
+gulp.task('less:dev', function () {
+  gulp.src('less/main.less')
+    .pipe(sourcemaps.init())
+    .pipe(less())
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest('build/css'))
+})
+
+gulp.task('less:prod', function () {
   gulp.src('less/main.less')
     .pipe(less())
     .pipe(gulp.dest('build/css'))
@@ -14,7 +23,8 @@ gulp.task('bundle', function () {
   gulp.src('template-parts/*.php').pipe(gulp.dest('build/template-parts'))
 })
 
-gulp.task('build', ['less', 'bundle'])
+gulp.task('build:dev', ['less:dev', 'bundle'])
+gulp.task('build:prod', ['less:prod', 'bundle'])
 
 gulp.task('watch', function () {
   gulp.watch([
@@ -25,7 +35,7 @@ gulp.task('watch', function () {
     'less/*',
     'inc/**/*',
     'template-parts/**/*'
-  ], ['build'])
+  ], ['build:dev'])
 })
 
-gulp.task('default', ['build'])
+gulp.task('default', ['build:dev'])

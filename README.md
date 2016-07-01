@@ -7,4 +7,5 @@ Install dependencies: `$ npm install`
 
 ### Build
 
-Build theme for deployment: `$ gulp build`
+Production: `$ gulp build:prod`
+Local developement: `$ gulp build:dev`

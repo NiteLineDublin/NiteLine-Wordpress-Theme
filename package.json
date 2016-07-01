@@ -7,13 +7,10 @@
   },
   "author": "NiteLine",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
+    "bootstrap": "^3.3.6",
     "browserify": "^13.0.0",
     "gulp": "^3.9.1",
-    "gulp-less": "^3.0.5",
-    "webpack-stream": "^3.1.0"
-  },
-  "dependencies": {
-    "bootstrap": "^3.3.6"
+    "gulp-less": "^3.0.5"
   }
 }

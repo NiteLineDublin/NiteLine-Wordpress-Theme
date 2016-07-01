@@ -22,7 +22,7 @@ gulp.task('watch', function () {
     'screenshot.png',
     '*.php',
     'img/*',
-    'src/**/*',
+    'less/*',
     'inc/**/*',
     'template-parts/**/*'
   ], ['build'])

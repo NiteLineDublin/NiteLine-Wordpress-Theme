@@ -25,4 +25,5 @@ gulp.task('bundle', function () {
 
 gulp.task('build', ['less', 'bundle'])
 
-gulp.task('default', ['watch-less'])
+gulp.task('watch', ['watch-less'])
+gulp.task('default', ['build'])

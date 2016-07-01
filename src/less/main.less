@@ -36,6 +36,22 @@ h3 {
   font-weight: 600;
 }
 
+@media(max-width: @screen-xs-max) {
+  .nav > li > a {
+    font-size: 1.3em;
+    text-align: center;
+    line-height: 2.0;
+  }
+
+  p {
+    font-size: 1.3em;
+  }
+
+  .pillars h3 {
+    font-size: 1.3em;
+  }
+}
+
 .menu-item > a {
   color: white;
   height: 50px;
@@ -52,26 +68,42 @@ h3 {
 }
 
 .dropdown-menu {
-  background: @niteline-yellow;
+  -webkit-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+  opacity: 0;
+  display: block;
+}
+
+.open .dropdown-menu {
+  opacity: 1;
+}
+
+.navbar-nav .dropdown-menu {
+  background: white !important;
+  border-radius: 4px !important;
+  margin: 0 1em 1em !important;
+
   li {
     text-shadow: none;
-    border-bottom: 1px solid @orange-divider;
 
-    &:not(:last-child):after {
-      border-bottom: none;
+    &:not(:last-child) {
+      border-bottom: 1px solid #dedede;
     }
 
-    &:hover {
-      background: @niteline-navy;
+    a, a:focus, a:hover {
+      color: @niteline-navy;
+      padding: 1.1em 1.5em 0 1.5em !important;
 
-      a {
-        color: white;
+      @media(max-width: @screen-xs-max) {
+        & {
+          font-size: 1.2em;
+          padding: 1em 1em 0 1em !important;
+        }
       }
     }
 
-    a {
-      color: @niteline-navy;
-      padding-top: 1em;
+    &:hover {
+      background: @niteline-yellow;
     }
   }
 }
@@ -92,6 +124,7 @@ h3 {
 }
 
 header.homepage-header {
+  padding: 15px;
   color: white;
   background: @niteline-navy;
   background: url('../img/clouds.svg') no-repeat center bottom,
@@ -261,6 +294,7 @@ section.yellow-section {
 }
 
 header.site-header {
+  padding: 15px 0 0 0;
   background: @niteline-navy;
   .box-shadow(0 1px 3px rgba(0.0, 0.0, 0.0, 0.3));
 }

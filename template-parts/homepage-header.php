@@ -31,9 +31,8 @@
       <p>Student Support, Every Night of Term<br />
       Lines open 9pm &ndash; 2:30am</p>
       <?php
+        date_default_timezone_set('Europe/London');
         $now = new DateTime();
-        $now->setTimezone(new DateTimeZone('Europe/London'));
-
         $start = DateTime::createFromFormat('H:i a', '9:00 pm');
         $end = DateTime::createFromFormat('H:i a', '2:30 am');
         if (!get_field('lines_open')):

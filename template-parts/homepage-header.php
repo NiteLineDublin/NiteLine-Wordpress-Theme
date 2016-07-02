@@ -31,14 +31,17 @@
       <p>Student Support, Every Night of Term<br />
       Lines open 9pm &ndash; 2:30am</p>
       <?php
-        $date = new DateTime();
-        $date->setTimezone(new DateTimeZone('Europe/London'));
+        $now = new DateTime();
+        $now->setTimezone(new DateTimeZone('Europe/London'));
+
+        $start = DateTime::createFromFormat('H:i a', '9:00 pm');
+        $end = DateTime::createFromFormat('H:i a', '2:30 am');
         if (!get_field('lines_open')):
       ?>
         <div class="closed-message">
           <p><?php the_field('closed_message'); ?></p>
         </div>
-      <?php elseif (($date->format('H') >= 21) || ($date->format('H') <= 2 && $date->format('i') < 30)): ?>
+      <?php elseif ($now >= $start || $now <= $end): ?>
         <h4>&mdash; OR &mdash;</h4>
         <a id="mibew-agent-button" href="/niteline/mibew/chat?locale=en" onclick="Mibew.Objects.ChatPopups['570c1127309d3fa1'].open();return false;">
           <button class="btn btn-yellow">Connect with a<br />Listener Online now</button>

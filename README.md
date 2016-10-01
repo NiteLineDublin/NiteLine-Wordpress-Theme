@@ -7,5 +7,5 @@ Install dependencies: `$ npm install`
 
 ### Build
 
-- Production (with minification): `$ gulp build:prod`
-- Local development (no minification): `$ gulp build:dev`
+- Production: `$ npm run build`
+- Local developement: `$ npm run build-dev`

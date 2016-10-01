@@ -42,7 +42,7 @@
         </div>
       <?php elseif ($now >= $start || $now <= $end): ?>
         <h4>&mdash; OR &mdash;</h4>
-        <a id="mibew-agent-button" href="/niteline/mibew/chat?locale=en" onclick="Mibew.Objects.ChatPopups['570c1127309d3fa1'].open();return false;">
+        <a id="mibew-agent-button" href="/ol/chat?locale=en" onclick="Mibew.Objects.ChatPopups['570c1127309d3fa1'].open();return false;">
           <button class="btn btn-yellow">Connect with a<br />Listener Online now</button>
         </a>
         <script type="text/javascript" src="http://localhost:8888/niteline/mibew/js/compiled/chat_popup.js"></script>
